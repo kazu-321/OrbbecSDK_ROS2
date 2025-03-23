@@ -26,9 +26,9 @@ def generate_launch_description():
         DeclareLaunchArgument('cloud_frame_id', default_value=''),
         DeclareLaunchArgument('point_cloud_qos', default_value='default'),
         DeclareLaunchArgument('connection_delay', default_value='100'),
-        DeclareLaunchArgument('color_width', default_value='1280'),
-        DeclareLaunchArgument('color_height', default_value='720'),
-        DeclareLaunchArgument('color_fps', default_value='30'),
+        DeclareLaunchArgument('color_width', default_value='2560'), #3840x2160 2560x1440
+        DeclareLaunchArgument('color_height', default_value='1440'),
+        DeclareLaunchArgument('color_fps', default_value='5'), # change fps
         DeclareLaunchArgument('color_format', default_value='MJPG'),
         DeclareLaunchArgument('enable_color', default_value='true'),
         DeclareLaunchArgument('flip_color', default_value='false'),
@@ -41,7 +41,7 @@ def generate_launch_description():
         DeclareLaunchArgument('color_white_balance', default_value='-1'),
         DeclareLaunchArgument('depth_width', default_value='640'),
         DeclareLaunchArgument('depth_height', default_value='576'),
-        DeclareLaunchArgument('depth_fps', default_value='30'),
+        DeclareLaunchArgument('depth_fps', default_value='5'), # change depth fps
         DeclareLaunchArgument('depth_format', default_value='Y16'),
         DeclareLaunchArgument('enable_depth', default_value='true'),
         DeclareLaunchArgument('flip_depth', default_value='false'),
@@ -84,7 +84,7 @@ def generate_launch_description():
         DeclareLaunchArgument('enable_soft_filter', default_value='true'),
         DeclareLaunchArgument('soft_filter_max_diff', default_value='-1'),
         DeclareLaunchArgument('soft_filter_speckle_size', default_value='-1'),
-        DeclareLaunchArgument('sync_mode', default_value='standalone'),
+        DeclareLaunchArgument('sync_mode', default_value='free_run'), # change stand_alone to free_run
         DeclareLaunchArgument('depth_delay_us', default_value='0'),
         DeclareLaunchArgument('color_delay_us', default_value='0'),
         DeclareLaunchArgument('trigger2image_delay_us', default_value='0'),
